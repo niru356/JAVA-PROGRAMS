@@ -1,15 +1,13 @@
-import java.io.*;
 public class question5 {
-    public static void main(String[] args)throws IOException
+    public static void main(String args[])
     {
-        int n,i,sum=0;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Entert the Number of Terms =");
-        n=Integer.parseInt(br.readLine());
-        for(i=1;i<=n;i++)
+        int a=0,b=1,c=0,n=10,i;
+        for(i=0;i<=n;i++)
         {
-            sum=sum+i;
+            c=a+b;
+            a=b;
+            b=c;
+            System.out.print(a+" ");
         }
-        System.out.println("Sum of First " +n+ " Natural Numbers is =" +sum);
     }
 }

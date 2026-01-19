@@ -1,36 +1,12 @@
 import java.io.*;
-public class question8
-{
-    public static void main(String args[])throws IOException
+public class question8 {
+    public static void main(String arsg[])throws IOException
     {
-        int n,i,flag=0;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        n=Integer.parseInt(br.readLine());
-        if(n==1 || n==0)
+        int i,n=10,sqr;
+        for(i=0;i<=n;i++)
         {
-            System.out.println("Not Prime Number");
-        }
-        else
-        {
-            for(i=2;i<=n/2;i++)
-            {
-                if(n%i==0)
-                {
-                    flag=1;
-                    break;
-                }
-            }
-            if(flag==0)
-            {
-                System.out.println("Prime Number");
-            }
-            else
-            {
-                System.out.println("Not Prime Number");
-            }
+            sqr = (int)Math.pow(2, i);
+            System.err.println(sqr+" ");
         }
     }
 }
-
-        

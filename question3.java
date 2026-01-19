@@ -1,18 +1,29 @@
-
 import java.io.*;
-
 public class question3 {
-    public static void main(String args[])throws IOException{
-        int n,i;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number of Terms =");
-        n=Integer.parseInt(br.readLine());
-        for(i=1;i<=n;i++)
+    public static void main(String args[]) throws IOException
+    {
+        int num, d, temp, sum = 0;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        System.out.println("Enter the Number =");
+        num = Integer.parseInt(br.readLine());
+        
+        temp = num;   // store original number
+        
+        while(num > 0)
         {
-            if(i % 2 == 0)
-            {
-                System.out.print(i+ " ");
-            }
+            d = num % 10;
+            sum = sum + d;
+            num = num / 10;
+        }
+        
+        if(temp % sum == 0)   // ✅ correct check
+        {
+            System.out.println("Harshad Number");
+        }
+        else
+        {
+            System.out.println("Not a Harshad Number");
         }
     }
 }

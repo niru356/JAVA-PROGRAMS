@@ -1,17 +1,14 @@
-import java.io.*;
 public class question9 {
-    public static void main(String[] args)throws IOException
+    public static void main(String args[])
     {
-        int num,rev=0,rem;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter a Number =");
-        num=Integer.parseInt(br.readLine());
-        while(num>0)
+        int i,sum=0,j;
+        for(i=1;i<=10;i++)
         {
-            rem=num%10;
-            rev=rev*10+rem;
-            num=num/10;
+            for(j=2;j<=i;j++)
+            {
+                sum=i+j;
+                System.out.print(sum+" ");
+            }
         }
-        System.out.println("Reverse of the Number is =" +rev);
     }
 }

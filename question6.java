@@ -1,17 +1,14 @@
-import java.io.*;
 public class question6 {
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
-        int n,d,count=0;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        n=Integer.parseInt(br.readLine());
-        while(n>0)
+        int a=0,b=1,c=0,n=10,i,sum=0;
+        for(i=0;i<=n;i++)
         {
-            d=n%10;
-            count++;
-            n=n/10;
+            c=a+b;
+            sum=sum+c;
+            a=b;
+            b=c;
         }
-        System.out.println("Number of Digits =" +count);
+        System.out.print(sum+" ");
     }
 }
