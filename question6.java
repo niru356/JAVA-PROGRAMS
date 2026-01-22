@@ -1,14 +1,20 @@
 public class question6 {
     public static void main(String args[])
     {
-        int a=0,b=1,c=0,n=10,i,sum=0;
-        for(i=0;i<=n;i++)
+        int n=5;
+        int i,j;
+        for(i=1;i<=n;i++)
         {
-            c=a+b;
-            sum=sum+c;
-            a=b;
-            b=c;
+            for(j=1;j<=n-
+                i;j++)
+            {
+                System.err.print(" ");
+            }
+            for(j=1;j<=n;j++)
+            {
+                System.err.print("*");
+            }
+            System.err.println();
         }
-        System.out.print(sum+" ");
     }
 }

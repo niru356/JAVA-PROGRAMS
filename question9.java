@@ -1,14 +1,17 @@
+import java.io.*;
 public class question9 {
-    public static void main(String args[])
+    public static void main(String[] args)throws IOException
     {
-        int i,sum=0,j;
-        for(i=1;i<=10;i++)
+        int n,i=1,count=0;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.err.println("Enter the Number =");
+        n=Integer.parseInt(br.readLine());
+        while(i<=n)
         {
-            for(j=2;j<=i;j++)
-            {
-                sum=i+j;
-                System.out.print(sum+" ");
-            }
+            System.err.println(i+" ");
+            i=i*2;
+            count++;
         }
+        System.err.println("Total Power of 2 = "+count);
     }
 }

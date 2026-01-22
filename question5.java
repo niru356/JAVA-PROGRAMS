@@ -1,13 +1,21 @@
-public class question5 {
+public class question5
+{   
     public static void main(String args[])
     {
-        int a=0,b=1,c=0,n=10,i;
-        for(i=0;i<=n;i++)
+        if (args.length == 0)
         {
-            c=a+b;
-            a=b;
-            b=c;
-            System.out.print(a+" ");
+            System.out.println("Please provide radius as command line argument");
+            return;
         }
+
+        double radius, volume, area;
+
+        radius = Double.parseDouble(args[0]);
+
+        volume = (4.0 / 3.0) * Math.PI * radius * radius * radius;
+        area = 4 * Math.PI * radius * radius;
+
+        System.out.println("Volume of Sphere = " + volume);
+        System.out.println("Area of the Sphere = " + area);
     }
 }

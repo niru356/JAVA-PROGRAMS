@@ -1,17 +1,21 @@
+
 import java.io.*;
 public class question10 {
-    public static void main(String[] args)throws IOException
+    public static void main(String args[])throws IOException
     {
-        int num,num2,temp, sum=0,rem;
+        int num,d,sum=0;
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
+        System.err.println("Enter the Number =");
         num=Integer.parseInt(br.readLine());
-        System.out.println("Enter the Number =");
-        num2=Integer.parseInt(br.readLine());
-        temp=num;
-        num=num2;
-        num2=temp;
-        System.out.println("After Swapping First Number =" +num);
-        System.out.println("After Swapping Second Number =" +num2);
+        while(num>0)
+        {
+            d=num%10;
+            if(d % 2 == 0)
+            {
+                sum=sum+d;
+            }
+            num=num/10;
+        }
+        System.err.println("Sum od Even Digits ="+sum);
     }
 }

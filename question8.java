@@ -1,12 +1,15 @@
+
 import java.io.*;
 public class question8 {
-    public static void main(String arsg[])throws IOException
+    public static void main(String args[])throws IOException
     {
-        int i,n=10,sqr;
-        for(i=0;i<=n;i++)
-        {
-            sqr = (int)Math.pow(2, i);
-            System.err.println(sqr+" ");
-        }
+        int num,power,num2;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Emter the Number =");
+        num=Integer.parseInt(br.readLine());
+        System.err.println("Enter the Power =");
+        num2=Integer.parseInt(br.readLine());
+        power=(int)(Math.pow(num, num2));
+        System.err.println(power+" ");
     }
 }
