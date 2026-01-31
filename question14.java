@@ -1,31 +1,24 @@
 import java.io.*;
+
 public class question14 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String args[]) throws IOException {
+        int num, d, min;
 
-        int n, i, max = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter the Number = ");
+        num = Integer.parseInt(br.readLine());
 
-        System.out.println("Enter the Number:");
-        n = Integer.parseInt(br.readLine());
+        min = num % 10;   // initialize min with last digit
 
-        int temp = n; // store original value
-
-        for (i = 2; i <= n; i++) {
-            while (n % i == 0) {
-                System.out.println(i);
-                n = n / i;
-
-                if (i > max) {
-                    max = i;
-                }
+        while (num > 0) {
+            d = num % 10;
+            if (d < min) {
+                min = d;
             }
+            num = num / 10;
         }
 
-        // If number itself is prime
-        if (max == 0) {
-            max = temp;
-        }
-
-        System.out.println("The Largest Prime Factor is = " + max);
+        System.out.println("Minimum Digit in Number = " + min);
     }
 }
+
