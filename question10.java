@@ -1,21 +1,20 @@
-
-import java.io.*;
-public class question10 {
-    public static void main(String args[])throws IOException
+import java.util.*;
+public class question10
+{
+    public static void main(String args[])
     {
-        int num,d,sum=0;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.err.println("Enter the Number =");
-        num=Integer.parseInt(br.readLine());
-        while(num>0)
+        int arr[]=new int[10];
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the 10 elements in the array");
+        int max=arr[0];
+        for(int i=0;i<10;i++)
         {
-            d=num%10;
-            if(d % 2 == 0)
+            arr[i]=sc.nextInt();
+            if(arr[i]>max)
             {
-                sum=sum+d;
+                max=arr[i];
             }
-            num=num/10;
         }
-        System.err.println("Sum od Even Digits ="+sum);
+        System.out.println("Largest Elements in the Array ="+max);
     }
 }

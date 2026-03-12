@@ -1,17 +1,28 @@
-import java.io.*;
-public class question11 {
-    public static void main(String args[])throws IOException
+import java.util.*;
+public class question11
+{
+    public static void main(String args[])
     {
-        int num,pro=1,d;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        num=Integer.parseInt(br.readLine());
-        while(num>0)
+        int arr[]=new int[5];
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the 10 elements in the array");
+        int max=arr[0];
+        int secmax=arr[0];
+        for(int i=0;i<5;i++)
         {
-            d=num%10;
-            pro=pro*d;
-            num=num/10;
+            arr[i]=sc.nextInt();
+            if(arr[i]>max)
+            {
+                max=arr[i];
+            }
         }
-        System.err.println("Product of the Digits ="+pro);
+        for(int i=0;i<5;i++)
+        {
+            if(arr[i]>secmax && arr[i]!=max)
+            {
+                secmax=arr[i];
+            }
+        }
+        System.out.println("Second Largest Elements in the Array ="+secmax);
     }
 }

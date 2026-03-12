@@ -1,18 +1,17 @@
-import java.io.*;
+import java.util.*;
 public class question3 {
-    public static void main(String[] args)throws IOException
+    public static void main(String args[])
     {
-        int n,i,a=0,b=1,c=1,d;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number of Terms =");
-        n=Integer.parseInt(br.readLine());
-        for(i=1;i<=n;i++)
+        int arr[]=new int[5];
+        Scanner sc=new Scanner(System.in);
+        int i,sum=0;
+        System.out.println("Enter the 5 Elements of the Array =");
+        for(i=0;i<arr.length;i++)
         {
-            System.out.print(a+" ");
-            d=a+b+c;
-            a=b;
-            b=c;
-            c=d;
+            arr[i]=sc.nextInt();
+            sum=sum+arr[i];
         }
+        System.out.println("Sum of Array Elements ="+sum);
+        System.out.println("Average of Array Elements ="+(sum/arr.length));
     }
 }

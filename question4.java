@@ -1,18 +1,19 @@
-
-import java.io.*;
+import java.util.*;
 public class question4 {
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
-        int n,i,a=1,sum,b=3;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        n=Integer.parseInt(br.readLine());
-        for(i=1;i<=n;i++)
+        int arr[]=new int[5];
+        Scanner sc=new Scanner(System.in);
+        int i,max=arr[0];
+        System.out.println("Enter the Elements of the Array =");
+        for(i=0;i<arr.length;i++)
         {
-            sum=2*a+1;
-            a=b;
-            b=sum;
-            System.err.println(a+" ");
+            arr[i]=sc.nextInt();
+            if(arr[i]>max)
+            {
+                max=arr[i];
+            }
         }
+        System.err.println("Maximum Elements in the Array ="+max);
     }
 }

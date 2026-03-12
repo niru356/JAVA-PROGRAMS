@@ -1,18 +1,18 @@
-import java.io.*;
+import java.util.*;
+
 public class question1 {
-    public static void main(String args[])throws IOException
-    {
-        int n,sum=0,i,a=0,b=1,c;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        n=Integer.parseInt(br.readLine());
-        for(i=1;i<=n;i++)
-        {
-            sum=sum+a;
-            c=a+b;
-            a=b;
-            b=c;
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int arr[] = new int[5];
+
+        System.out.println("Enter the 5 Elements of the Array =");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
         }
-        System.err.println("Sum of the Fibonancii Series ="+sum);
+
+        System.out.println("The Elements of the Array are =");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }

@@ -1,16 +1,20 @@
-import java.io.*;
-public class question7 {
-    public static void main(String[] args)throws IOException
+class Persons
+{
+    int age;
+    String name;
+    Persons()
     {
-        int n,i,fact=1;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        n=Integer.parseInt(br.readLine());
-        for(i=1;i<=n;i++)
-        {
-            fact=fact*i;
-        }
-        System.err.println(fact+" ");
+        age=30;
+        name="Nirakar";
     }
-}
+    void display()
+    {
+        System.out.println("Name:" +name);
+        System.out.println("Age:"+age);
+    }
+    public static void main(String[] args) {
+        Persons p1=new Persons();
+        p1.display();
+    }
 
+}

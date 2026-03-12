@@ -1,21 +1,23 @@
+import java.util.*;
 public class question5
-{   
-    public static void main(String args[])
+{
+    public static void main(String[] args)
     {
-        if (args.length == 0)
+        int arr[]=new int[5];
+        int count=0,i;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Elements of the Array =");
+        for(i=0;i<arr.length;i++)
         {
-            System.out.println("Please provide radius as command line argument");
-            return;
+            arr[i]=sc.nextInt();
         }
-
-        double radius, volume, area;
-
-        radius = Double.parseDouble(args[0]);
-
-        volume = (4.0 / 3.0) * Math.PI * radius * radius * radius;
-        area = 4 * Math.PI * radius * radius;
-
-        System.out.println("Volume of Sphere = " + volume);
-        System.out.println("Area of the Sphere = " + area);
+        for(i=0;i<arr.length;i++)
+        {
+            if(arr[i]%2==0)
+            {
+                count++;
+            }
+        }
+        System.out.println("Number of Even Elements in the Array ="+count);
     }
 }

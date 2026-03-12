@@ -1,18 +1,16 @@
-import java.io.*;
+import java.util.*;
 public class question2 {
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
-        int n,c,a=2,b=1,i;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        n=Integer.parseInt(br.readLine());
-        for(i=1;i<=n;i++)
+        int arr[]=new int[5];
+        Scanner sc=new Scanner(System.in);
+        int i,sum=0;
+        System.out.println("Enter the 5 Elements of the Array =");
+        for(i=0;i<arr.length;i++)
         {
-            System.err.println(a+" ");
-            c=a+b;
-            a=b;
-            b=c;
+            arr[i]=sc.nextInt();
+            sum=sum+arr[i];
         }
-
+        System.out.println("Sum of Array Elements ="+sum);
     }
 }
