@@ -1,19 +1,17 @@
-import java.util.*;
-public class question4 {
+class Circle{
+    double radius;
+    Circle(double radius)
+    {
+        this.radius=radius;
+    }
+    void area()
+    {
+        double area=3.14*radius*radius;
+        System.out.println("Area of the Circle ="+area);
+    }
     public static void main(String args[])
     {
-        int arr[]=new int[5];
-        Scanner sc=new Scanner(System.in);
-        int i,max=arr[0];
-        System.out.println("Enter the Elements of the Array =");
-        for(i=0;i<arr.length;i++)
-        {
-            arr[i]=sc.nextInt();
-            if(arr[i]>max)
-            {
-                max=arr[i];
-            }
-        }
-        System.err.println("Maximum Elements in the Array ="+max);
+        Circle c1=new Circle(5.0);
+        c1.area();
     }
 }

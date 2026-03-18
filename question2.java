@@ -1,16 +1,21 @@
-import java.util.*;
-public class question2 {
+class Car
+{
+    String brand;
+    int price;
+    //Parameterized constructor
+    Car(String b,int p)
+    {
+        brand=b;
+        price=p;
+    }
+    void display()
+    {
+        System.out.println("Brand :"+brand);
+        System.out.println("Price :"+price);
+    }
     public static void main(String args[])
     {
-        int arr[]=new int[5];
-        Scanner sc=new Scanner(System.in);
-        int i,sum=0;
-        System.out.println("Enter the 5 Elements of the Array =");
-        for(i=0;i<arr.length;i++)
-        {
-            arr[i]=sc.nextInt();
-            sum=sum+arr[i];
-        }
-        System.out.println("Sum of Array Elements ="+sum);
+        Car c1=new Car("Toyota",200000);
+        c1.display();
     }
 }

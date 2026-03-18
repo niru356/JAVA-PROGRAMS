@@ -1,28 +1,38 @@
-import java.util.*;
-public class question11
+class Area
 {
-    public static void main(String args[])
+    int length,breadth,height,side;
+    double radius;
+    // Create a paramterized Constructor
+    public Area(int length,int breadth)
     {
-        int arr[]=new int[5];
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the 10 elements in the array");
-        int max=arr[0];
-        int secmax=arr[0];
-        for(int i=0;i<5;i++)
-        {
-            arr[i]=sc.nextInt();
-            if(arr[i]>max)
-            {
-                max=arr[i];
-            }
-        }
-        for(int i=0;i<5;i++)
-        {
-            if(arr[i]>secmax && arr[i]!=max)
-            {
-                secmax=arr[i];
-            }
-        }
-        System.out.println("Second Largest Elements in the Array ="+secmax);
+        this.length=length;
+        this.breadth=breadth;
+    }   
+    public Area(int side)
+    {
+        this.side=side;
+    }
+    public Area(double radius)
+    {
+        this.radius=radius;
+    }
+    // Create a method to calculate the area of the rectangle
+    public void areaOfRectangle()
+    {
+        int area=length*breadth;
+        System.out.println("Area of the rectangle is: "+area);
+    }
+    // Create a method to calculate the area of the circle
+    public void areaOfCircle()
+    {
+        double area=3.14*radius*radius;
+        System.out.println("Area of the circle is: "+area);
+    }
+    public static void main(String[] args)
+    {
+        Area area=new Area(12,8);
+        Area area2=new Area(5.0);
+        area.areaOfRectangle();
+        area2.areaOfCircle();
     }
 }

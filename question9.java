@@ -1,16 +1,24 @@
-import java.io.IOException;
-import java.util.*;
-public class question9
+class Box
 {
-    public static void main(String args[])throws IOException
+    int length,breadth;
+    Box(int length,int breadth)
     {
-        double radius,area,volume,pi=3.14;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the Radius of the Sphere =");
-        radius=sc.nextDouble();
-        area=4*radius*radius*pi;
-        volume=(4/3)*radius*radius*radius*pi;
-        System.out.println("Area of the Sphere ="+area);
-        System.out.println("Volume of the Sphere ="+volume);
+        this.length=length;
+        this.breadth=breadth;
+    }
+    void calculateArea()
+    {
+        System.out.println("Area of the Box ="+(length*breadth));
+    }
+    void display()
+    {
+        System.out.println("Length of the Box ="+length);
+        System.out.println("Breadth of the Box ="+breadth);
+    }
+    public static void main(String[] args)
+    {
+        Box b=new Box(10,7);
+        b.display();
+        b.calculateArea();
     }
 }

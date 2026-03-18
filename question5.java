@@ -1,23 +1,27 @@
-import java.util.*;
-public class question5
+class Employee
 {
-    public static void main(String[] args)
+    String name;
+    int id;
+    double salary;
+    Employee(String name,int id,double salary)
     {
-        int arr[]=new int[5];
-        int count=0,i;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the Elements of the Array =");
-        for(i=0;i<arr.length;i++)
-        {
-            arr[i]=sc.nextInt();
-        }
-        for(i=0;i<arr.length;i++)
-        {
-            if(arr[i]%2==0)
-            {
-                count++;
-            }
-        }
-        System.out.println("Number of Even Elements in the Array ="+count);
+        this.name=name;
+        this.id=id;
+        this.salary=salary;
+    }
+    void display()
+    {
+        System.out.println("Name :"+name);
+        System.out.println("ID :"+id);
+        System.out.println("Salary :"+salary);
+    }
+    public static void main(String args[])
+    {
+        Employee e1=new Employee("John",101,50000);
+        Employee e2=new Employee("Niru",102,60000);
+        Employee e3=new Employee("Aditi",103,70000);
+        e1.display();
+        e2.display();
+        e3.display();
     }
 }

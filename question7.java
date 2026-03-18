@@ -1,20 +1,31 @@
-class Persons
+import java.util.*;
+class Number
 {
-    int age;
-    String name;
-    Persons()
+    int num;
+    Number(int num)
     {
-        age=30;
-        name="Nirakar";
+        this.num=num;
+    }
+    void input()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Number =");
+        num=sc.nextInt();
     }
     void display()
     {
-        System.out.println("Name:" +name);
-        System.out.println("Age:"+age);
+        if(num%2==0)
+        {
+            System.out.println(num+" is Even Number");
+        }
+        else
+        {
+            System.out.println(num+" is Odd Number");
+        }
     }
     public static void main(String[] args) {
-        Persons p1=new Persons();
-        p1.display();
+        Number n=new Number(0);
+        n.input();
+        n.display();
     }
-
 }

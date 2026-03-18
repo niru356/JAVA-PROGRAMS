@@ -1,38 +1,27 @@
-class Box
-{
-    double width;
-    double height;
-    double length;
-    Box()
-    {
-        length=1;
-        width=1;
-        height=1;
+import java.util.*;
+
+class Square {
+    int side;
+
+    Square(int side) {
+        this.side = side;
     }
-    Box(double side)
-    {
-        length=side;
-        width=side;
-        height=side;
+
+    void calculateArea() {
+        System.out.println("Area of Square = " + (side * side));
     }
-    Box(double l,double w,double h)
-    {
-        length=l;
-        width=w;
-        height=h;
+
+    void display() {
+        System.out.println("Side of the Square = " + side);
     }
-    void calculate()
-    {
-        double volume=length*width*height;
-        System.out.println("Volume of the Box is="+volume);
-    }
-    public static void main(String args[])
-    {
-        Box b1=new Box();
-        Box b2=new Box(5);
-        Box b3=new Box(2,3,4);
-        b1.calculate();
-        b2.calculate();
-        b3.calculate();
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Side of the Square =");
+        int side = sc.nextInt();
+
+        Square s = new Square(side);
+        s.display();
+        s.calculateArea();
     }
 }

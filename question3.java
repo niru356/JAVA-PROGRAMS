@@ -1,17 +1,23 @@
-import java.util.*;
-public class question3 {
-    public static void main(String args[])
+class Book
+{
+    String title;
+    String author;
+    int price;
+    //Parameterized Constructor
+    Book(String title, String author, int price)
     {
-        int arr[]=new int[5];
-        Scanner sc=new Scanner(System.in);
-        int i,sum=0;
-        System.out.println("Enter the 5 Elements of the Array =");
-        for(i=0;i<arr.length;i++)
-        {
-            arr[i]=sc.nextInt();
-            sum=sum+arr[i];
-        }
-        System.out.println("Sum of Array Elements ="+sum);
-        System.out.println("Average of Array Elements ="+(sum/arr.length));
+        this.title=title;
+        this.author=author;
+        this.price=price;
+    }
+    void display()
+    {
+        System.out.println("Title :"+title);
+        System.out.println("Author :"+author);
+        System.out.println("Price :"+price);
+    }
+    public static void main(String[] args) {
+        Book b1=new Book("1984", "George Orwell" ,15);
+        b1.display();
     }
 }

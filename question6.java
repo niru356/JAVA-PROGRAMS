@@ -1,20 +1,27 @@
-public class question6 {
+class Students
+{
+    String name;
+    int age;
+    String Course;
+
+    Students()
+    {
+        name = "Nirakar Rath";
+        age = 22;
+        Course = "MCA";
+    }
+
+    // DISPLAY THE DETAILS
+    void display()
+    {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Course: " + Course);
+    }
+
     public static void main(String args[])
     {
-        int n=5;
-        int i,j;
-        for(i=1;i<=n;i++)
-        {
-            for(j=1;j<=n-
-                i;j++)
-            {
-                System.err.print(" ");
-            }
-            for(j=1;j<=n;j++)
-            {
-                System.err.print("*");
-            }
-            System.err.println();
-        }
+        Students s1 = new Students();
+        s1.display();
     }
 }
