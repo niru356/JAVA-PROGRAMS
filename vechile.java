@@ -2,7 +2,7 @@ import java.util.*;
 class vechile
 {
 	private String Brand;
-	private String country_of_origin;
+	private country_of_origin;
 	private double Base_price;
 	
 	// INPUT THE DETAILS OF VECHILE
@@ -20,7 +20,7 @@ class vechile
 	public void display()
 	{
 		System.out.println("Brand of the Vechile ="+Brand);
-		System.out.println("Country of the Origin ="+country_of_origin);
+		System.out.pritnln("Country of the Origin ="+country_of_origin);
 		System.out.println("Base Price of the Vechile ="+Base_price);
 	}
 	
@@ -47,18 +47,16 @@ class vechile
 			speed=sc.nextDouble();
 			System.out.println("Enter the Market price of the car =");
 			Market_price=sc.nextDouble();
-			
 		}
 		public void calculate()
 		{
-			double x=getBasePrice();
 			if(speed>=80)
 			{
-				Market_price=x+(0.15*x);
+				Market_price=base+(0.15*base);
 			}
 			else
 			{
-				Market_price=x-(0.5*x);
+				Market_price=base-(0.5*base);
 			}
 		}
 		
@@ -70,7 +68,7 @@ class vechile
 			System.out.println("Market Price of the Car ="+Market_price);
 		}
 	}
-		public class Main
+		public class Main()
 		{
 			public static void main(String args[])
 			{

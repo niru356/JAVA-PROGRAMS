@@ -1,17 +1,19 @@
 import java.util.*;
-public class prime
+public class even
 {
 	public static void main(String args[])
 	{
-		int num,i,flag=0;
+		int num;
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the Number =");
 		num=sc.nextInt();
-		for(i=2;i<=num;i++){
-			while(num%i==0){
-				System.out.println(i+" ");
-				num=num/i;
-			}
+		if((num^1)==num+1)
+		{
+			System.out.println("Even Number");
+		}
+		else
+		{
+			System.out.println("Odd Number");
 		}
 	}
 }

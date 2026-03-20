@@ -1,24 +1,17 @@
-import java.io.*;
-public class greater {
-    public static void main(String args[])throws IOException
-    {
-        int a,b;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter First Number =");
-        a=Integer.parseInt(br.readLine());
-        System.out.println("Enter Second Number ="); 
-        b=Integer.parseInt(br.readLine());
-        if(a>b)
-        {
-            System.out.println(a + "is Greater Number");
-        }
-        else if(b>a)
-        {
-            System.out.println(b + "is Greater Number");
-        }
-        else
-        {
-            System.out.println("Both Number are Equal");
-        }
-    }
+import java.util.*;
+public class greater
+{
+public static void main(String args[])
+{
+int x,y,greater,smaller;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the Number =");
+x=sc.nextInt();
+System.out.println("Enter the Number =");
+y=sc.nextInt();
+greater=(x>y)? x:y;
+smaller=y;
+System.out.println("Greatest of two Numbers ="+greater);
+System.out.println("Smaller of Two Numbers ="+smaller);
+}
 }
