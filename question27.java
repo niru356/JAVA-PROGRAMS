@@ -1,21 +1,20 @@
-public class question27 {
-    public static void main(String args[]) {
-        int i, j;
-
-        // Upper half
-        for(i = 1; i <= 5; i++) {
-            for(j = 1; j <= i; j++) {
-                System.out.print(j + " ");
-            }
-            System.out.println();
+import java.util.*;
+class Avg
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Number of Elements:=");
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out.println("Eter the Elements =");
+        int sum=0;
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+            sum=sum+arr[i];
         }
-
-        // Lower half
-        for(i = 4; i >= 1; i--) {
-            for(j = 1; j <= i; j++) {
-                System.out.print(j + " ");  // FIXED
-            }
-            System.out.println();
-        }
+        double Avg=(double)sum/n;
+        System.out.println("The Average is ="+Avg);
     }
 }

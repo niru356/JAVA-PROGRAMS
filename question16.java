@@ -1,21 +1,26 @@
-import java.io.*;
-public class question16
+class Student
 {
-    public static void main(String[] args)throws IOException
+    String name;
+    int age;
+    static String college="KIIT";
+    Student(String name,int age)
     {
-        int num1,num2,i,hcf = 0;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the Number =");
-        num1=Integer.parseInt(br.readLine());
-        System.err.println("Enter the Number =");
-        num2=Integer.parseInt(br.readLine());
-        for(i=1;i<=num1 && i<=num2;i++)
-        {
-            if(num1%i==0 && num2%i==0)
-            {
-                hcf=i;
-            }
-        }
-        System.err.println("HCF of the Number ="+hcf);
+        this.name=name;
+        this.age=age;
+    }
+    void display()
+    {
+        System.out.println("Name = " + name);
+        System.out.println("Age = " + age);
+        System.out.println("College = " + college);
+    }
+    public static void main(String[] args)
+    {
+        Student s1=new Student("Nirakar",24);
+        Student s2=new Student("Satyarth",22);
+        System.out.println("Details of Student 1:");
+        s1.display();
+        System.out.println("Details of Student 2:");
+        s2.display();
     }
 }

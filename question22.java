@@ -1,22 +1,29 @@
-public class question22 {
-    public static void main(String[] args) {
-        int i,j,n=5;
-        for(i=1;i<=n;i++)
+import java.util.*;
+class Out
+{
+    String name;
+    int age;
+    class In
+    {
+        void details()
         {
-            for(j=1;j<=n-i;j++)
-            {
-                System.out.print(" ");
-            }
-            for(j=1;j<=2*i;j++)
-            {
-                if(i==1 || i==n || j==1 || j==2*i-1)
-                {
-                    System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter name: ");
+            name=sc.nextLine();
+            System.out.print("Enter age: ");
+            age=sc.nextInt();
         }
+        void display()
+        {
+            System.out.println("Name: "+name);
+            System.out.println("Age: "+age);
+        }
+    }
+    public static void main(String[] args)
+    {
+        Out o=new Out();
+        Out.In i=o.new In();
+        i.details();
+        i.display();
     }
 }

@@ -1,22 +1,23 @@
-public class question23 {
-    public static void main(String[] args) {
-        int i,j,n=5;
-        for(i=n;i>=1;i--)
+import java.util.*;
+class Outer1
+{
+    void display()
+    {
+        class Inner1
         {
-            for(j=1;j<=n-i;j++)
+            void show()
             {
-                System.out.print(" ");
+                System.out.println("My name is Nirakar Rath");
+                System.out.println("I am a student of KIIT University");
+                System.out.println("I am in 3rd year of my B.Tech course");
             }
-            for(j=1;j<=2*i;j++)
-            {
-                if(i==1 || i==n || j==1 || j==2*i-1)
-                {
-                    System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
         }
+        Inner1 o=new Inner1();
+        o.show();
+    }
+    public static void main(String[] args)
+    {
+        Outer1 o=new Outer1();
+        o.display();
     }
 }

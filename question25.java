@@ -1,15 +1,14 @@
-public class question25 {
-    public static void main(String[] args) 
+package mypack;
+
+class myclass
+{
+    void show()
     {
-        int i,j,N=5;
-        for(i=1;i<=5;i++)
-        {
-            for(j=1;j<=i;j++)
-            {
-                System.out.print(N);
-            }
-            System.err.println();
-            N=N-1;
-        }
+        System.out.println("Hello My Name is Nirakar");
+    }
+    public static void main(String args[])
+    {
+        myclass obj=new myclass();
+        obj.show();
     }
 }
