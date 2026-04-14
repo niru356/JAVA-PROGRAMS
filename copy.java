@@ -1,20 +1,22 @@
 import java.util.*;
-public class reverse
+public class copy
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         int arr[]=new int[5];
+        int arr1[]=new int[5];
         int i;
-        System.out.println("Enter the elements of the Array =");
+        System.out.println("Enter the 5 elements =");
         for(i=0;i<5;i++)
         {
             arr[i]=sc.nextInt();
         }
-        System.out.println("The Elements of the Array in Reverse Order =");
-        for(i=4;i>=0;i--)
+        System.out.println("Elements are =");
+        for(i=0;i<5;i++)
         {
-            System.out.println(arr[i]+" ");
+            arr1[i]=arr[i];
+            System.out.println(arr1[i]+" ");
         }
     }
 }
