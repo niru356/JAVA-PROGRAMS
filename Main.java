@@ -1,87 +1,75 @@
 import java.util.*;
-class vechile
-{
-	private String Brand;
-	private String country_of_origin;
-	private double Base_price;
-	
-	// INPUT THE DETAILS OF VECHILE
-	public void input()
-	{
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the Brand of the Vechile =");
-		Brand=sc.nextLine();
-		System.out.println("Enter the Country of Origin =");
-		country_of_origin=sc.nextLine();
-		System.out.println("Enter the Base Price of the Vechile =");
-		Base_price=sc.nextDouble();
-	}
-	// DISPLAY THE DETAILS
-	public void display()
-	{
-		System.out.println("Brand of the Vechile ="+Brand);
-		System.out.println("Country of the Origin ="+country_of_origin);
-		System.out.println("Base Price of the Vechile ="+Base_price);
-	}
-	
-	public double getBasePrice()
-	{
-		return Base_price;
-	}
-}
-	
-	// CREATING A SUBCLASS
-	class car extends vechile
-	{
-		private String Model;
-		private double speed;
-		private double Market_price;
-		
-		public void read()
-		{
-			Scanner sc=new Scanner(System.in);
-			input();
-			System.out.println("Enter the Model of the Car =");
-			Model=sc.nextLine();
-			System.out.println("Enter the Speed of the Car =");
-			speed=sc.nextDouble();
-			System.out.println("Enter the Market price of the car =");
-			Market_price=sc.nextDouble();
-			
-		}
-		public void calculate()
-		{
-			double x=getBasePrice();
-			if(speed>=80)
-			{
-				Market_price=x+(0.15*x);
-			}
-			else
-			{
-				Market_price=x-(0.5*x);
-			}
-		}
-		
-		// DISPLAY IN SUB-CLASS
-		public void show()
-		{
-			System.out.println("Model of the Car ="+Model);
-			System.out.println("Speed of the Car ="+speed);
-			System.out.println("Market Price of the Car ="+Market_price);
-		}
-	}
-		public class Main
-		{
-			public static void main(String args[])
-			{
-				car c=new car();
-				c.read();
-				System.out.println("Car Details =");
-				c.show();
-			}
-		}
-	
 
-	
-			
-	
+// Base class
+class Vehicle {
+    private String brand;
+    private String country_of_origin;
+    private double base_price;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Brand: ");
+        brand = sc.nextLine();
+        System.out.print("Enter Country of Origin: ");
+        country_of_origin = sc.nextLine();
+        System.out.print("Enter Base Price: ");
+        base_price = sc.nextDouble();
+    }
+
+    void display() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Country of Origin: " + country_of_origin);
+        System.out.println("Base Price: " + base_price);
+    }
+
+    double getBasePrice() {
+        return base_price;
+    }
+}
+
+// Subclass
+class Car extends Vehicle {
+    private String model;
+    private double speed;
+    private double market_price;
+
+    void read() {
+        Scanner sc = new Scanner(System.in);
+
+        input(); // parent method
+
+        sc.nextLine(); // clear buffer
+        System.out.print("Enter Model: ");
+        model = sc.nextLine();
+        System.out.print("Enter Speed (km/hr): ");
+        speed = sc.nextDouble();
+
+        calculateMarketPrice();
+    }
+
+    void calculateMarketPrice() {
+        double base = getBasePrice();
+        if (speed > 80) {
+            market_price = base + (0.15 * base);
+        } else {
+            market_price = base + (0.05 * base);
+        }
+    }
+
+    void show() {
+        display();
+        System.out.println("Model: " + model);
+        System.out.println("Speed: " + speed);
+        System.out.println("Market Price: " + market_price);
+    }
+}
+
+// Main class (FIX)
+public class Main {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.read();
+        System.out.println("\nCar Details:");
+        c.show();
+    }
+}
